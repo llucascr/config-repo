@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/identify_service
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+jwt:
+  public:
+    key: ${JWT_PUBLIC_KEY:classpath:keys/public.pem}
+  private:
+    key: ${JWT_PRIVATE_KEY:classpath:keys/private.pem}
+  expiration-seconds: ${JWT_EXPIRATION_SECONDS:3600}
