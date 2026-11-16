@@ -14,3 +14,10 @@ jwt:
   private:
     key: ${JWT_PRIVATE_KEY:classpath:keys/private.pem}
   expiration-seconds: ${JWT_EXPIRATION_SECONDS:3600}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
